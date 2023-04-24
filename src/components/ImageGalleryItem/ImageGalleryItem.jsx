@@ -12,7 +12,7 @@ export class ImageGalleryItem extends Component {
                     openModal({largeImage: largeImage, tags: tags});
                     }}
                     >
-                <img src={webImage} alt={tags} />
+                <img className={css.ImageGalleryItemImage} src={webImage} alt={tags} />
             </li>
         );
     }

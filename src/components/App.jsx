@@ -1,6 +1,6 @@
 import { Component } from "react";
 import axios from 'axios';
-import css from 'App.module.css';
+import css from 'styles.module.css';
 import { Searchbar } from "./Searchbar/Searchbar";
 import { getImagesWithQuery } from "./API/API" 
 import { ImageGallery } from "./ImageGallery/ImageGallery";

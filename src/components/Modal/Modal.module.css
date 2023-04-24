@@ -16,6 +16,6 @@
     max-height: calc(100vh - 24px);
   }
 
-  .Image {
+  /* .Image {
     object-fit: contain;
-  }
+  } */
