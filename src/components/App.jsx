@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import axios from 'axios';
 import css from 'styles.module.css';
 import { Searchbar } from "./Searchbar/Searchbar";
@@ -16,7 +16,7 @@ export class App extends Component{
     isLoading: false,
     error: null,
     searchQuery: '',
-    isModal: false,
+    isModal: null,
   };
   pageNumber = 1;
 
@@ -82,6 +82,8 @@ export class App extends Component{
     );
   }
 }
+
+
 
 // export const App = () => {
 //   return (

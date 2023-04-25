@@ -5,20 +5,21 @@ import { Component } from 'react';
 export class ImageGalleryItem extends Component {
     
     render() {
-        const {webImage, largeImage, tags, openModal} = this.props;
+        const {id, webImage, largeImage, tags, openModal} = this.props;
         return (
-            <li className={css.ImageGalleryItem} 
-                onClick={() => { 
-                    openModal({largeImage: largeImage, tags: tags});
-                    }}
-                    >
-                <img className={css.ImageGalleryItemImage} src={webImage} alt={tags} />
+            <li className={css.ImageGalleryItem} key={id}>
+                <img className={css.ImageGalleryItemImage} src={webImage} alt={tags} 
+                        onClick={() => { 
+                            openModal({largeImage: largeImage, tags: tags});
+                        }}
+                />
             </li>
         );
     }
 }
 
 ImageGalleryItem.propTypes = {
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     webImage: PropTypes.string,
     largeImage: PropTypes.string,
     tags: PropTypes.string,
